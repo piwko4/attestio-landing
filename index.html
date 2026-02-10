@@ -12,12 +12,22 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="grid-lines"></div>
+        <div class="glow-orb glow-orb-1"></div>
+        <div class="glow-orb glow-orb-2"></div>
+        <div class="glow-orb glow-orb-3"></div>
+        <div class="particles" id="particles"></div>
+    </div>
+    <div class="noise-overlay"></div>
+
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <img src="../assets/attestio-v3-blue.svg" alt="Attestio" class="hero-logo">
+                    <img src="logo-simple.jpg" alt="Attestio" class="hero-logo">
                     <h1>The CMMC Survival Guide for Small Contractors</h1>
                     <p class="subheadline">A plain-English roadmap to certification—without losing your mind or your shirt. <strong>Free 20-page guide.</strong></p>
                     <a href="#get-guide" class="btn btn-primary">Get the Free Guide →</a>
@@ -45,73 +55,89 @@
     <!-- Pain Points Section -->
     <section class="pain-points">
         <div class="container">
-            <h2>Sound familiar?</h2>
+            <h2 class="reveal">Sound familiar?</h2>
             <div class="pain-grid">
-                <div class="pain-card">
+                <div class="pain-card reveal">
                     <h3>"I just found out I need CMMC Level 2..."</h3>
                     <p>...and I have no idea where to start. The DoD documentation is incomprehensible.</p>
                 </div>
-                <div class="pain-card">
+                <div class="pain-card reveal">
                     <h3>"I've seen the cost estimates..."</h3>
                     <p>...and I'm terrified. $250K? For a 15-person company? There has to be a better way.</p>
                 </div>
-                <div class="pain-card">
+                <div class="pain-card reveal">
                     <h3>"Consultants keep calling..."</h3>
                     <p>...but I can't tell who's legit and who's just trying to scare me into buying something.</p>
                 </div>
-                <div class="pain-card">
+                <div class="pain-card reveal">
                     <h3>"My prime contractor is asking questions..."</h3>
                     <p>...about my security posture and I don't know what to tell them.</p>
                 </div>
             </div>
-            <p class="transition-text">You're not alone. And you're not too late.<br><strong>This guide will show you exactly what to do.</strong></p>
+            <p class="transition-text reveal">You're not alone. And you're not too late.<br><strong>This guide will show you exactly what to do.</strong></p>
         </div>
     </section>
 
     <!-- What's Inside Section -->
     <section class="whats-inside">
         <div class="container">
-            <h2>What You'll Learn</h2>
+            <h2 class="reveal">What You'll Learn</h2>
             <div class="features-grid">
-                <div class="feature">
+                <div class="feature reveal">
                     <span class="feature-icon">📋</span>
-                    <h3>What CMMC Actually Is</h3>
-                    <p>Plain English explanation. No acronym soup. Finally understand what you're dealing with.</p>
+                    <div>
+                        <h3>What CMMC Actually Is</h3>
+                        <p>Plain English explanation. No acronym soup. Finally understand what you're dealing with.</p>
+                    </div>
                 </div>
-                <div class="feature">
+                <div class="feature reveal">
                     <span class="feature-icon">📅</span>
-                    <h3>The Real Timeline</h3>
-                    <p>Phase 1 started Nov 2025. Phase 2 hits Nov 2026. Know exactly when YOU need to act.</p>
+                    <div>
+                        <h3>The Real Timeline</h3>
+                        <p>Phase 1 started Nov 2025. Phase 2 hits Nov 2026. Know exactly when YOU need to act.</p>
+                    </div>
                 </div>
-                <div class="feature">
+                <div class="feature reveal">
                     <span class="feature-icon">💰</span>
-                    <h3>Honest Cost Breakdown</h3>
-                    <p>$70K-250K is typical, but it can be lower. See where the money actually goes.</p>
+                    <div>
+                        <h3>Honest Cost Breakdown</h3>
+                        <p>$70K-250K is typical, but it can be lower. See where the money actually goes.</p>
+                    </div>
                 </div>
-                <div class="feature">
+                <div class="feature reveal">
                     <span class="feature-icon">✅</span>
-                    <h3>The 110 Controls, Prioritized</h3>
-                    <p>Not all controls are equal. We ranked them by priority and effort so you know what to tackle first.</p>
+                    <div>
+                        <h3>The 110 Controls, Prioritized</h3>
+                        <p>Not all controls are equal. We ranked them by priority and effort so you know what to tackle first.</p>
+                    </div>
                 </div>
-                <div class="feature">
+                <div class="feature reveal">
                     <span class="feature-icon">🚀</span>
-                    <h3>Your First 10 Actions</h3>
-                    <p>Stop researching. Start doing. These are the 10 things to do THIS MONTH.</p>
+                    <div>
+                        <h3>Your First 10 Actions</h3>
+                        <p>Stop researching. Start doing. These are the 10 things to do THIS MONTH.</p>
+                    </div>
                 </div>
-                <div class="feature">
+                <div class="feature reveal">
                     <span class="feature-icon">⚠️</span>
-                    <h3>Mistakes That Kill Compliance</h3>
-                    <p>Learn from others' expensive errors. Avoid the traps that waste money and time.</p>
+                    <div>
+                        <h3>Mistakes That Kill Compliance</h3>
+                        <p>Learn from others' expensive errors. Avoid the traps that waste money and time.</p>
+                    </div>
                 </div>
-                <div class="feature">
+                <div class="feature reveal">
                     <span class="feature-icon">🔍</span>
-                    <h3>Self-Assessment vs. C3PAO</h3>
-                    <p>Finally understand the difference—and which one you actually need.</p>
+                    <div>
+                        <h3>Self-Assessment vs. C3PAO</h3>
+                        <p>Finally understand the difference—and which one you actually need.</p>
+                    </div>
                 </div>
-                <div class="feature">
+                <div class="feature reveal">
                     <span class="feature-icon">🛠️</span>
-                    <h3>Tools & Consultants Guide</h3>
-                    <p>Red flags to watch for. Questions to ask. Vendors that actually work for small contractors.</p>
+                    <div>
+                        <h3>Tools & Consultants Guide</h3>
+                        <p>Red flags to watch for. Questions to ask. Vendors that actually work for small contractors.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -120,8 +146,8 @@
     <!-- Credibility Section -->
     <section class="credibility">
         <div class="container">
-            <h2>Built from Real Experience</h2>
-            <div class="credibility-content">
+            <h2 class="reveal">Built from Real Experience</h2>
+            <div class="credibility-content reveal">
                 <p>This guide isn't theory. It's based on helping dozens of small contractors—machine shops, engineering firms, software companies—navigate CMMC successfully.</p>
                 <p>We've seen what works. We've seen what fails. We've seen contractors waste $100K on the wrong approach and others get compliant for a fraction of that.</p>
                 <p class="highlight">This guide is the document we wish existed when we started.</p>
@@ -132,10 +158,10 @@
     <!-- Secondary CTA Section -->
     <section id="get-guide" class="cta-section">
         <div class="container">
-            <h2>Stop Googling. Start Doing.</h2>
-            <p class="cta-subtext">20 pages of actionable, BS-free guidance. Download now and know exactly what to do tomorrow morning.</p>
+            <h2 class="reveal">Stop Googling. Start Doing.</h2>
+            <p class="cta-subtext reveal">20 pages of actionable, BS-free guidance. Download now and know exactly what to do tomorrow morning.</p>
             
-            <form id="lead-form" class="lead-form" action="https://formspree.io/f/FORMSPREE_ID" method="POST">
+            <form id="lead-form" class="lead-form reveal" action="https://formspree.io/f/FORMSPREE_ID" method="POST">
                 <!-- Formspree honeypot (spam filter) — hidden from humans -->
                 <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
                 <input type="hidden" name="_subject" value="New Attestio Lead">
@@ -180,9 +206,9 @@
     <!-- FAQ Section -->
     <section class="faq">
         <div class="container">
-            <h2>Questions? We've got answers.</h2>
+            <h2 class="reveal">Questions? We've got answers.</h2>
             <div class="faq-list">
-                <div class="faq-item">
+                <div class="faq-item reveal">
                     <button class="faq-question" aria-expanded="false">
                         Is this really free?
                         <span class="faq-icon">+</span>
@@ -191,7 +217,7 @@
                         <p>Yes. No credit card. No "free trial" that charges you later. Just the guide.</p>
                     </div>
                 </div>
-                <div class="faq-item">
+                <div class="faq-item reveal">
                     <button class="faq-question" aria-expanded="false">
                         Are you going to spam me?
                         <span class="faq-icon">+</span>
@@ -200,7 +226,7 @@
                         <p>No. You'll get the guide, maybe a few helpful follow-up emails, and that's it. Unsubscribe anytime.</p>
                     </div>
                 </div>
-                <div class="faq-item">
+                <div class="faq-item reveal">
                     <button class="faq-question" aria-expanded="false">
                         Is this up to date?
                         <span class="faq-icon">+</span>
@@ -209,7 +235,7 @@
                         <p>Yes. Last updated February 2026. We keep it current as CMMC evolves.</p>
                     </div>
                 </div>
-                <div class="faq-item">
+                <div class="faq-item reveal">
                     <button class="faq-question" aria-expanded="false">
                         Who is this guide for?
                         <span class="faq-icon">+</span>
@@ -218,7 +244,7 @@
                         <p>Small defense contractors (5-50 employees) who handle CUI and need CMMC Level 2 certification. If that's you, this guide will help.</p>
                     </div>
                 </div>
-                <div class="faq-item">
+                <div class="faq-item reveal">
                     <button class="faq-question" aria-expanded="false">
                         Will this guide make me compliant?
                         <span class="faq-icon">+</span>
@@ -227,7 +253,7 @@
                         <p>No guide can do that—you have to do the work. But this will show you exactly what work to do, in what order, and how to avoid expensive mistakes.</p>
                     </div>
                 </div>
-                <div class="faq-item">
+                <div class="faq-item reveal">
                     <button class="faq-question" aria-expanded="false">
                         Do you sell consulting services?
                         <span class="faq-icon">+</span>
@@ -243,8 +269,8 @@
     <!-- Footer CTA -->
     <section class="footer-cta">
         <div class="container">
-            <h2>Ready to Stop Worrying and Start Moving?</h2>
-            <a href="#get-guide" class="btn btn-primary btn-large">Get Your Free CMMC Survival Guide</a>
+            <h2 class="reveal">Ready to Stop Worrying and Start Moving?</h2>
+            <a href="#get-guide" class="btn btn-primary btn-large reveal">Get Your Free CMMC Survival Guide</a>
         </div>
     </section>
 
