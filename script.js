@@ -10,7 +10,7 @@
  */
 
 // ── Configuration ──────────────────────────────────────────────────────────────
-const FORM_ENDPOINT = 'https://formspree.io/f/FORMSPREE_ID'; // ← swap this
+const FORM_ENDPOINT = 'https://formspree.io/f/mjgegkoq'; // ← swap this
 // ────────────────────────────────────────────────────────────────────────────────
 
 document.addEventListener('DOMContentLoaded', function () {
