@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The CMMC Survival Guide for Small Contractors | Attestio</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: #1a1a2e;
+            background: #ffffff;
+            font-size: 17px;
+        }
+        
+        .container {
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 60px 30px;
+        }
+        
+        /* Cover Page */
+        .cover {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            margin: -60px -30px 60px;
+        }
+        
+        .cover h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+        }
+        
+        .cover .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+        
+        .cover .version {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+        
+        .cover .logo {
+            font-size: 1.1rem;
+            margin-top: 40px;
+            color: #d4af37;
+            font-weight: 600;
+        }
+        
+        /* Typography */
+        h2 {
+            font-size: 1.8rem;
+            color: #1a1a2e;
+            margin: 50px 0 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #d4af37;
+        }
+        
+        h3 {
+            font-size: 1.3rem;
+            color: #16213e;
+            margin: 35px 0 15px;
+        }
+        
+        h4 {
+            font-size: 1.1rem;
+            color: #333;
+            margin: 25px 0 12px;
+        }
+        
+        p {
+            margin-bottom: 18px;
+        }
+        
+        ul, ol {
+            margin: 15px 0 25px 25px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        strong {
+            color: #16213e;
+        }
+        
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.95rem;
+        }
+        
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        
+        th {
+            background: #1a1a2e;
+            color: white;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        /* Callout boxes */
+        .callout {
+            background: #f8f4e8;
+            border-left: 4px solid #d4af37;
+            padding: 20px 25px;
+            margin: 30px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .callout.warning {
+            background: #fff3f3;
+            border-left-color: #e74c3c;
+        }
+        
+        .callout.tip {
+            background: #e8f5e9;
+            border-left-color: #27ae60;
+        }
+        
+        /* TOC */
+        .toc {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 40px 0;
+        }
+        
+        .toc h3 {
+            margin-top: 0;
+            color: #1a1a2e;
+        }
+        
+        .toc ol {
+            margin: 15px 0 0 20px;
+        }
+        
+        .toc a {
+            color: #16213e;
+            text-decoration: none;
+        }
+        
+        .toc a:hover {
+            color: #d4af37;
+        }
+        
+        /* Footer */
+        .footer {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 2px solid #eee;
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .footer .logo {
+            color: #d4af37;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        /* Print styles */
+        @media print {
+            .cover { 
+                page-break-after: always; 
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            h2 { page-break-before: always; }
+            h2:first-of-type { page-break-before: avoid; }
+        }
+        
+        @media (max-width: 600px) {
+            .container { padding: 30px 20px; }
+            .cover { padding: 50px 20px; margin: -30px -20px 40px; }
+            .cover h1 { font-size: 1.8rem; }
+            h2 { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cover">
+            <h1>The CMMC Survival Guide<br>for Small Contractors</h1>
+            <p class="subtitle">A Plain-English Roadmap to Certification<br>Without Losing Your Mind (or Your Shirt)</p>
+            <p class="version">Version 1.0 | February 2026</p>
+            <p class="logo">ATTESTIO</p>
+        </div>
+
+        <h2>A Note Before We Begin</h2>
+        <p>If you're reading this, you probably just found out you need "CMMC Level 2" to keep bidding on DoD contracts, and you have no idea where to start. Maybe a prime contractor sent you a flowdown clause that made your eyes glaze over. Maybe you Googled "CMMC cost" and nearly had a heart attack.</p>
+        <p><strong>Take a breath. You're not alone.</strong></p>
+        <p>We've helped dozens of small contractors (5-50 people) navigate this process. Some panicked. Some overspent. Some did it smart. This guide contains everything we wish someone had told them—and us—at the start.</p>
+        <p>No sales pitch. No jargon soup. Just the truth about what CMMC is, what it costs, and how to get through it without bankrupting your company or losing your sanity.</p>
+        <p>Let's get into it.</p>
+
+        <div class="toc">
+            <h3>Table of Contents</h3>
+            <ol>
+                <li><a href="#chapter-1">What CMMC Actually Is (Plain English)</a></li>
+                <li><a href="#chapter-2">The Timeline That Actually Matters</a></li>
+                <li><a href="#chapter-3">What This Really Costs</a></li>
+                <li><a href="#chapter-4">The 110 Controls: Organized by Priority</a></li>
+                <li><a href="#chapter-5">Your First 10 Actions (Do These NOW)</a></li>
+                <li><a href="#chapter-6">Mistakes That Will Burn You</a></li>
+                <li><a href="#chapter-7">Choosing Tools and Consultants</a></li>
+                <li><a href="#chapter-8">Self-Assessment vs. C3PAO: What's the Difference?</a></li>
+                <li><a href="#chapter-9">Resources and Next Steps</a></li>
+            </ol>
+        </div>
+
+        <h2 id="chapter-1">Chapter 1: What CMMC Actually Is</h2>
+        
+        <h3>The 30-Second Version</h3>
+        <p>CMMC stands for <strong>Cybersecurity Maturity Model Certification</strong>. It's the DoD's way of making sure companies that handle sensitive defense information actually protect it—instead of just <em>saying</em> they protect it.</p>
+        <p>Before CMMC, contractors self-attested: "Yeah, we're secure." The DoD trusted them. Breaches happened. A lot of them. Sensitive data ended up in the wrong hands.</p>
+        <p>CMMC changes the game: now you have to <strong>prove</strong> you're secure, often through a third-party audit.</p>
+
+        <h3>The Three Levels (You Probably Need Level 2)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Level</th>
+                    <th>What It Means</th>
+                    <th>Who Needs It</th>
+                    <th>How You Prove It</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Level 1</strong></td>
+                    <td>Basic cyber hygiene</td>
+                    <td>FCI only (Federal Contract Information)</td>
+                    <td>Self-assessment</td>
+                </tr>
+                <tr>
+                    <td><strong>Level 2</strong></td>
+                    <td>110 security controls (NIST 800-171)</td>
+                    <td>CUI handlers (most contractors)</td>
+                    <td>Self or C3PAO audit</td>
+                </tr>
+                <tr>
+                    <td><strong>Level 3</strong></td>
+                    <td>Advanced (110+ controls)</td>
+                    <td>High-value programs</td>
+                    <td>Government audit</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="callout">
+            <strong>Key Point:</strong> If you touch CUI (Controlled Unclassified Information)—technical drawings, specs, contract details—you almost certainly need Level 2. That's 110 specific security requirements you must implement and document.
+        </div>
+
+        <h2 id="chapter-2">Chapter 2: The Timeline That Actually Matters</h2>
+        
+        <h3>CMMC 2.0 Rollout Schedule</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Phase</th>
+                    <th>Date</th>
+                    <th>What Happens</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Phase 1</td>
+                    <td>Now</td>
+                    <td>Self-assessments begin appearing in contracts</td>
+                </tr>
+                <tr>
+                    <td>Phase 2</td>
+                    <td>Late 2026</td>
+                    <td>C3PAO assessments required for certain contracts</td>
+                </tr>
+                <tr>
+                    <td>Phase 3</td>
+                    <td>2027</td>
+                    <td>Full implementation across DoD contracts</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="callout warning">
+            <strong>Reality Check:</strong> If you're starting from scratch, plan for 12-18 months to get compliant. The companies that wait until Phase 2 hits will be scrambling—and paying premium prices for help.
+        </div>
+
+        <h2 id="chapter-3">Chapter 3: What This Really Costs</h2>
+        
+        <h3>The Honest Numbers</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Company Size</th>
+                    <th>DIY (Tools + Time)</th>
+                    <th>With Consultant</th>
+                    <th>C3PAO Assessment</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1-10 employees</td>
+                    <td>$15K-30K</td>
+                    <td>$40K-80K</td>
+                    <td>$15K-25K</td>
+                </tr>
+                <tr>
+                    <td>11-50 employees</td>
+                    <td>$30K-60K</td>
+                    <td>$80K-150K</td>
+                    <td>$25K-50K</td>
+                </tr>
+                <tr>
+                    <td>50-200 employees</td>
+                    <td>$50K-100K</td>
+                    <td>$150K-300K</td>
+                    <td>$50K-100K</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Where the Money Actually Goes</h3>
+        <ul>
+            <li><strong>Tools & Software:</strong> $5K-20K/year (SIEM, endpoint protection, encryption)</li>
+            <li><strong>Documentation:</strong> 100-300 hours of your time (or consultant fees)</li>
+            <li><strong>Training:</strong> $1K-5K (security awareness, role-based training)</li>
+            <li><strong>Gap Remediation:</strong> Varies wildly based on current state</li>
+            <li><strong>C3PAO Assessment:</strong> $15K-50K+ depending on scope</li>
+        </ul>
+
+        <h2 id="chapter-4">Chapter 4: The 110 Controls, Prioritized</h2>
+        
+        <h3>Start Here: The Critical 20</h3>
+        <p>Not all controls are equal. These are the ones assessors look at first and where most companies fail:</p>
+        <ol>
+            <li><strong>AC.L2-3.1.1</strong> — Limit system access to authorized users</li>
+            <li><strong>AC.L2-3.1.2</strong> — Limit system access to authorized functions</li>
+            <li><strong>IA.L2-3.5.1</strong> — Identify system users and processes</li>
+            <li><strong>IA.L2-3.5.2</strong> — Authenticate users and processes</li>
+            <li><strong>SC.L2-3.13.1</strong> — Monitor communications at boundaries</li>
+            <li><strong>SC.L2-3.13.2</strong> — Employ architectural designs to protect CUI</li>
+            <li><strong>AU.L2-3.3.1</strong> — Create and retain system audit logs</li>
+            <li><strong>AU.L2-3.3.2</strong> — Ensure actions can be traced to users</li>
+            <li><strong>CM.L2-3.4.1</strong> — Establish and maintain configuration baselines</li>
+            <li><strong>CM.L2-3.4.2</strong> — Track and control configuration changes</li>
+        </ol>
+
+        <div class="callout tip">
+            <strong>Pro Tip:</strong> If you can demonstrate solid implementation of these 20 controls with evidence, you're already ahead of 80% of contractors attempting CMMC.
+        </div>
+
+        <h2 id="chapter-5">Chapter 5: Your First 10 Actions</h2>
+        
+        <p>Do these this week. Seriously.</p>
+        <ol>
+            <li><strong>Identify your CUI</strong> — Where does it live? Who touches it? Map it.</li>
+            <li><strong>Enable MFA everywhere</strong> — Email, VPN, critical systems. No exceptions.</li>
+            <li><strong>Encrypt laptops</strong> — BitLocker (Windows) or FileVault (Mac). Today.</li>
+            <li><strong>Review who has admin rights</strong> — Cut the list by 50%. Minimum.</li>
+            <li><strong>Turn on audit logging</strong> — You can't prove compliance without logs.</li>
+            <li><strong>Document your network</strong> — Diagram showing where CUI flows.</li>
+            <li><strong>Check your backups</strong> — Test a restore. When did you last do that?</li>
+            <li><strong>Update everything</strong> — OS, applications, firmware. Patch now.</li>
+            <li><strong>Run a vulnerability scan</strong> — Nessus, Qualys, or even free OpenVAS.</li>
+            <li><strong>Start your SSP</strong> — System Security Plan. The master document.</li>
+        </ol>
+
+        <h2 id="chapter-6">Chapter 6: Mistakes That Will Burn You</h2>
+        
+        <h3>The Expensive Ones</h3>
+        <ul>
+            <li><strong>Buying tools before understanding requirements</strong> — Don't buy a $50K SIEM when you need a $5K solution.</li>
+            <li><strong>Hiring a consultant too early</strong> — Do the discovery yourself first. You'll waste less of their time (your money).</li>
+            <li><strong>Ignoring the POA&M</strong> — The Plan of Action & Milestones is your friend. Use it.</li>
+            <li><strong>Scope creep</strong> — Only include systems that actually touch CUI. Smaller scope = lower cost.</li>
+            <li><strong>Waiting until you need it</strong> — A contract requiring CMMC drops, and you're 18 months from compliant? You just lost that bid.</li>
+        </ul>
+
+        <div class="callout warning">
+            <strong>The Biggest Mistake:</strong> Treating this as a checkbox exercise. Assessors can tell when you're faking it. Build real security, document it well, and the certification follows.
+        </div>
+
+        <h2 id="chapter-7">Chapter 7: Choosing Tools and Consultants</h2>
+        
+        <h3>What You Actually Need (Minimum Viable Stack)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Need</th>
+                    <th>Budget Option</th>
+                    <th>Premium Option</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Endpoint Protection</td>
+                    <td>Microsoft Defender</td>
+                    <td>CrowdStrike, SentinelOne</td>
+                </tr>
+                <tr>
+                    <td>Email Security</td>
+                    <td>Microsoft 365 built-in</td>
+                    <td>Proofpoint, Mimecast</td>
+                </tr>
+                <tr>
+                    <td>SIEM/Logging</td>
+                    <td>Microsoft Sentinel, Wazuh</td>
+                    <td>Splunk, LogRhythm</td>
+                </tr>
+                <tr>
+                    <td>Vulnerability Scanning</td>
+                    <td>OpenVAS, Nessus Essentials</td>
+                    <td>Tenable.io, Qualys</td>
+                </tr>
+                <tr>
+                    <td>Documentation</td>
+                    <td>Word/SharePoint + discipline</td>
+                    <td>GRC platform (Archer, ServiceNow)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Red Flags When Hiring a Consultant</h3>
+        <ul>
+            <li>Guarantees certification (no one can guarantee that)</li>
+            <li>Won't explain their methodology</li>
+            <li>Pushes specific tool vendors hard (kickbacks?)</li>
+            <li>No references from companies your size</li>
+            <li>Quote seems too low (they'll upsell later)</li>
+        </ul>
+
+        <h2 id="chapter-8">Chapter 8: Self-Assessment vs. C3PAO</h2>
+        
+        <h3>When Self-Assessment Works</h3>
+        <ul>
+            <li>Contracts that don't require third-party certification (yet)</li>
+            <li>You want to find gaps before paying for an assessment</li>
+            <li>Building your compliance program incrementally</li>
+        </ul>
+
+        <h3>When You Need C3PAO</h3>
+        <ul>
+            <li>Contract explicitly requires it</li>
+            <li>You handle particularly sensitive CUI</li>
+            <li>Prime contractor demands it</li>
+            <li>You want the competitive advantage of certified status</li>
+        </ul>
+
+        <div class="callout">
+            <strong>The Smart Play:</strong> Do a thorough self-assessment first. Fix everything you find. Then bring in the C3PAO. You'll pass faster and cheaper.
+        </div>
+
+        <h2 id="chapter-9">Chapter 9: Resources and Next Steps</h2>
+        
+        <h3>Official Sources</h3>
+        <ul>
+            <li><strong>CMMC-AB (Cyber-AB)</strong> — cyberab.org — The accreditation body</li>
+            <li><strong>NIST 800-171</strong> — The actual control requirements</li>
+            <li><strong>NIST 800-171A</strong> — Assessment procedures</li>
+            <li><strong>DoD CIO CMMC Page</strong> — Official program updates</li>
+        </ul>
+
+        <h3>Your Next Steps</h3>
+        <ol>
+            <li><strong>This week:</strong> Complete the First 10 Actions from Chapter 5</li>
+            <li><strong>This month:</strong> Conduct a gap assessment against all 110 controls</li>
+            <li><strong>Next 90 days:</strong> Build your SSP and start remediation</li>
+            <li><strong>6 months:</strong> Internal audit — are you actually compliant?</li>
+            <li><strong>12 months:</strong> Ready for C3PAO assessment</li>
+        </ol>
+
+        <div class="callout tip">
+            <strong>Need Help?</strong> Attestio builds AI-powered tools to guide small contractors through CMMC compliance—without the $100K consultant price tag. Visit <strong>attestio.ai</strong> to learn more.
+        </div>
+
+        <div class="footer">
+            <p class="logo">ATTESTIO</p>
+            <p>© 2026 Attestio LLC. All rights reserved.</p>
+            <p>This guide is for informational purposes only and does not constitute legal or professional advice.</p>
+        </div>
+    </div>
+</body>
+</html>
