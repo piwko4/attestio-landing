@@ -161,13 +161,20 @@ function initForm() {
         hideError();
 
         try {
+            // Use FormData for better Formspree compatibility
+            const formData = new FormData();
+            formData.append('email', payload.email);
+            formData.append('firstName', payload.firstName);
+            formData.append('company', payload.company);
+            formData.append('companySize', payload.companySize);
+            formData.append('_subject', payload._subject);
+            
             const res = await fetch(FORM_ENDPOINT, {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json',
-                    'Accept':       'application/json'
+                    'Accept': 'application/json'
                 },
-                body: JSON.stringify(payload)
+                body: formData
             });
 
             if (res.ok) {
